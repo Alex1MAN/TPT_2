@@ -1,0 +1,2 @@
+1. That's a MAIN SOLUTION FOLDER
+2. It may contains different files for docker, git, licences, md and others
