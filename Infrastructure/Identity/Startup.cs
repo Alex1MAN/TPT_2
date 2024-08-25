@@ -1,5 +1,6 @@
 using FSH.WebApi.Infrastructure.Persistence.Context;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace FSH.WebApi.Infrastructure.Identity;
