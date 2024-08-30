@@ -15,7 +15,7 @@ using FSH.WebApi.Domain.Identity;
 using FSH.WebApi.Infrastructure.Auth;
 using FSH.WebApi.Infrastructure.Persistence.Context;
 using FSH.WebApi.Shared.Authorization;
-//using Mapster;
+using Mapster;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
