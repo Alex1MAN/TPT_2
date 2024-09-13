@@ -1,6 +1,6 @@
-namespace FSH.WebApi.Domain.Common.Contracts;
-
 using System.Runtime;
+
+namespace FSH.WebApi.Domain.Common.Contracts;
 
 public abstract class AuditableEntity : AuditableEntity<DefaultIdType>
 {
