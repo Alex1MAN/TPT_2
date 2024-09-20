@@ -1,7 +1,5 @@
 namespace FSH.WebApi.Domain.Common.Events;
 
-using FSH.WebApi.Domain.Common.Contracts;
-
 public static class EntityDeletedEvent
 {
     public static EntityDeletedEvent<TEntity> WithEntity<TEntity>(TEntity entity)

@@ -16,7 +16,7 @@ public abstract class AuditableEntity<T> : BaseEntity<T>, IAuditableEntity, ISof
 
     protected AuditableEntity()
     {
-        /*CreatedOn = DateTime.UtcNow;
-        LastModifiedOn = DateTime.UtcNow;*/
+        CreatedOn = DateTime.UtcNow;
+        LastModifiedOn = DateTime.UtcNow;
     }
 }
