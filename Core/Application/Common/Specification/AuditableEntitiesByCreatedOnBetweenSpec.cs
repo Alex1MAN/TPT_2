@@ -1,4 +1,6 @@
-﻿namespace FSH.WebApi.Application.Common.Specification;
+﻿using Ardalis.Specification;
+
+namespace FSH.WebApi.Application.Common.Specification;
 
 public class AuditableEntitiesByCreatedOnBetweenSpec<T> : Specification<T>
     where T : AuditableEntity
