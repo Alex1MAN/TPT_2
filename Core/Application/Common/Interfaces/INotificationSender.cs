@@ -1,4 +1,6 @@
-﻿namespace FSH.WebApi.Application.Common.Interfaces;
+﻿using FSH.WebApi.Shared.Notifications;
+
+namespace FSH.WebApi.Application.Common.Interfaces;
 
 public interface INotificationSender : ITransientService
 {

@@ -1,3 +1,5 @@
+using Ardalis.Specification;
+
 namespace FSH.WebApi.Application.Common.Models;
 
 public static class PaginationResponseExtensions
