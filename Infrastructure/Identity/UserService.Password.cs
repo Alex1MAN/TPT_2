@@ -1,6 +1,7 @@
 ﻿using FSH.WebApi.Application.Common.Exceptions;
 using FSH.WebApi.Application.Common.Mailing;
 using FSH.WebApi.Application.Identity.Users.Password;
+using Infrastructure.Identity;
 using Microsoft.AspNetCore.WebUtilities;
 
 namespace FSH.WebApi.Infrastructure.Identity;

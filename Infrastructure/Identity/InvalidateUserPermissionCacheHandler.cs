@@ -3,7 +3,7 @@ using FSH.WebApi.Application.Identity.Users;
 using FSH.WebApi.Domain.Identity;
 using Microsoft.AspNetCore.Identity;
 
-namespace FSH.WebApi.Infrastructure.Identity;
+namespace Infrastructure.Identity;
 
 internal class InvalidateUserPermissionCacheHandler :
     IEventNotificationHandler<ApplicationUserUpdatedEvent>,

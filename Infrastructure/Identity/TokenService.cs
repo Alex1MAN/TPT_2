@@ -4,17 +4,17 @@ using System.Security.Cryptography;
 using System.Text;
 using FSH.WebApi.Application.Common.Exceptions;
 using FSH.WebApi.Application.Identity.Tokens;
-using FSH.WebApi.Infrastructure.Auth;
-using FSH.WebApi.Infrastructure.Auth.Jwt;
 using FSH.WebApi.Infrastructure.Multitenancy;
 using FSH.WebApi.Shared.Authorization;
 using FSH.WebApi.Shared.Multitenancy;
+using Infrastructure.Auth;
+using Infrastructure.Auth.Jwt;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
-namespace FSH.WebApi.Infrastructure.Identity;
+namespace Infrastructure.Identity;
 
 internal class TokenService : ITokenService
 {

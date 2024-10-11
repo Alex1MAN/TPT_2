@@ -4,6 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <OutputType>Library</OutputType>
   </PropertyGroup>
 
   <ItemGroup>
@@ -61,6 +62,7 @@
     <ProjectReference Include="..\Core\Application\Application.csproj" />
     <ProjectReference Include="..\Core\Domain\Domain.csproj" />
     <ProjectReference Include="..\Core\Shared\Shared.csproj" />
+    <ProjectReference Include="..\PostgreSQL\PostgreSQL.csproj" />
   </ItemGroup>
 
 </Project>

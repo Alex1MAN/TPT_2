@@ -1,7 +1,7 @@
 using System.Security.Claims;
 using FSH.WebApi.Application.Common.Interfaces;
 
-namespace FSH.WebApi.Infrastructure.Auth;
+namespace Infrastructure.Auth;
 
 public class CurrentUser : ICurrentUser, ICurrentUserInitializer
 {

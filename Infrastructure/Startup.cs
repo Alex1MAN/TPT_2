@@ -1,6 +1,5 @@
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using FSH.WebApi.Infrastructure.Auth;
 /*
 using FSH.WebApi.Infrastructure.BackgroundJobs;
 using FSH.WebApi.Infrastructure.Caching;
@@ -27,11 +26,15 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 using FSH.WebApi.Application;
-using FSH.WebApi.Infrastructure.Persistence.Initialization;
+using FSH.WebApi.PostgreSQL.Persistence.Initialization; // Folder Persistence move to project "PostgreSQL"
+
+
+using Infrastructure;
+using Infrastructure.Auth;
 
 [assembly: InternalsVisibleTo("Infrastructure.Test")]
 
-namespace FSH.WebApi.Infrastructure;
+namespace Infrastructure;
 
 public static class Startup
 {
@@ -57,7 +60,7 @@ public static class Startup
             //.AddPersistence()
             //.AddRequestLogging(config)
             .AddRouting(options => options.LowercaseUrls = true);
-            //.AddServices();
+        //.AddServices();
     }
 
     private static IServiceCollection AddApiVersioning(this IServiceCollection services) =>
@@ -93,9 +96,9 @@ public static class Startup
             .UseCurrentUser()
             //.UseMultiTenancy()
             .UseAuthorization();
-            //.UseRequestLogging(config)
-            //.UseHangfireDashboard(config)
-            //.UseOpenApiDocumentation(config);
+    //.UseRequestLogging(config)
+    //.UseHangfireDashboard(config)
+    //.UseOpenApiDocumentation(config);
 
     public static IEndpointRouteBuilder MapEndpoints(this IEndpointRouteBuilder builder)
     {

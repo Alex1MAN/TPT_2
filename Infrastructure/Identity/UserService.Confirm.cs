@@ -2,6 +2,7 @@ using System.Text;
 using FSH.WebApi.Application.Common.Exceptions;
 using FSH.WebApi.Infrastructure.Common;
 using FSH.WebApi.Shared.Multitenancy;
+using Infrastructure.Identity;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.EntityFrameworkCore;
 

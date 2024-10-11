@@ -5,6 +5,7 @@ using FSH.WebApi.Application.Identity.Users;
 using FSH.WebApi.Domain.Common;
 using FSH.WebApi.Domain.Identity;
 using FSH.WebApi.Shared.Authorization;
+using Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Web;
