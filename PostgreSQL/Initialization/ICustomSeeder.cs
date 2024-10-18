@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Infrastructure.Persistence.Initialization;
+namespace FSH.WebApi.PostgreSQL.Initialization;
 
 public interface ICustomSeeder
 {

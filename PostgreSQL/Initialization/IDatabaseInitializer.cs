@@ -1,6 +1,6 @@
-﻿using FSH.WebApi.Infrastructure.Multitenancy;
+﻿//using FSH.WebApi.Infrastructure.Multitenancy;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Initialization;
+namespace FSH.WebApi.PostgreSQL.Initialization;
 
 internal interface IDatabaseInitializer
 {

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Configuration;
+namespace FSH.WebApi.PostgreSQL.Configuration;
 
 public class ApplicationUserConfig : IEntityTypeConfiguration<ApplicationUser>
 {

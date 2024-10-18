@@ -1,11 +1,11 @@
 ﻿using Finbuckle.MultiTenant;
-using FSH.WebApi.Infrastructure.Multitenancy;
-using FSH.WebApi.Shared.Multitenancy;
+//using FSH.WebApi.Infrastructure.Multitenancy;
+//using FSH.WebApi.Shared.Multitenancy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Initialization;
+namespace FSH.WebApi.PostgreSQL.Initialization;
 
 internal class DatabaseInitializer : IDatabaseInitializer
 {

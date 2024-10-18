@@ -1,11 +1,11 @@
 using System.Data;
 using Dapper;
-using Finbuckle.MultiTenant.EntityFrameworkCore;
+//using Finbuckle.MultiTenant.EntityFrameworkCore;
 using FSH.WebApi.Application.Common.Persistence;
 using FSH.WebApi.Domain.Common.Contracts;
-using FSH.WebApi.Infrastructure.Persistence.Context;
+using FSH.WebApi.PostgreSQL.Context;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Repository;
+namespace FSH.WebApi.PostgreSQL.Repository;
 
 public class DapperRepository : IDapperRepository
 {

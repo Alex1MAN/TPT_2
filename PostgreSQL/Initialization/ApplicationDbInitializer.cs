@@ -1,9 +1,9 @@
 using Finbuckle.MultiTenant;
-using FSH.WebApi.Infrastructure.Persistence.Context;
+using FSH.WebApi.PostgreSQL.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Initialization;
+namespace FSH.WebApi.PostgreSQL.Initialization;
 
 internal class ApplicationDbInitializer
 {

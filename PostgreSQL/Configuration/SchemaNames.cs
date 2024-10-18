@@ -1,4 +1,4 @@
-﻿namespace FSH.WebApi.Infrastructure.Persistence.Configuration;
+﻿namespace FSH.WebApi.PostgreSQL.Configuration;
 
 internal static class SchemaNames
 {

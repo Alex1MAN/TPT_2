@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Initialization;
+namespace FSH.WebApi.PostgreSQL.Initialization;
 
 internal class CustomSeederRunner
 {

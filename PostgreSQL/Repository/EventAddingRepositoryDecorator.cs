@@ -3,7 +3,7 @@ using FSH.WebApi.Application.Common.Persistence;
 using FSH.WebApi.Domain.Common.Contracts;
 using FSH.WebApi.Domain.Common.Events;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Repository;
+namespace FSH.WebApi.PostgreSQL.Repository;
 
 /// <summary>
 /// The repository that implements IRepositoryWithEvents.

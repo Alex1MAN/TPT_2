@@ -1,13 +1,13 @@
 ﻿using FSH.WebApi.Infrastructure.Identity;
-using FSH.WebApi.Infrastructure.Multitenancy;
-using FSH.WebApi.Infrastructure.Persistence.Context;
+//using FSH.WebApi.Infrastructure.Multitenancy;
+using FSH.WebApi.PostgreSQL.Context;
 using FSH.WebApi.Shared.Authorization;
 using FSH.WebApi.Shared.Multitenancy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Initialization;
+namespace FSH.WebApi.PostgreSQL.Initialization;
 
 internal class ApplicationDbSeeder
 {

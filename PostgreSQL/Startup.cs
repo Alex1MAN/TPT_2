@@ -1,18 +1,18 @@
 using FSH.WebApi.Application.Common.Persistence;
 using FSH.WebApi.Domain.Common.Contracts;
-using FSH.WebApi.Infrastructure.Common;
-using FSH.WebApi.Infrastructure.Persistence.ConnectionString;
-using FSH.WebApi.Infrastructure.Persistence.Context;
-using FSH.WebApi.Infrastructure.Persistence.Initialization;
-using FSH.WebApi.Infrastructure.Persistence.Repository;
+//using FSH.WebApi.Infrastructure.Common;
+using FSH.WebApi.PostgreSQL.ConnectionString;
+using FSH.WebApi.PostgreSQL.Context;
+using FSH.WebApi.PostgreSQL.Initialization;
+using FSH.WebApi.PostgreSQL.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+//using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+//using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using Serilog;
 
-namespace FSH.WebApi.Infrastructure.Persistence;
+namespace FSH.WebApi.PostgreSQL;
 
 internal static class Startup
 {

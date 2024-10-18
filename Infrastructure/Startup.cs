@@ -28,7 +28,6 @@ using Microsoft.Extensions.DependencyInjection;
 using FSH.WebApi.Application;
 using FSH.WebApi.PostgreSQL.Persistence.Initialization; // Folder Persistence move to project "PostgreSQL"
 
-
 using Infrastructure;
 using Infrastructure.Auth;
 

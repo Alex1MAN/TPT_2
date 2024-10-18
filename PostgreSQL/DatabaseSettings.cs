@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace FSH.WebApi.Infrastructure.Persistence;
+namespace FSH.WebApi.PostgreSQL;
 
 public class DatabaseSettings : IValidatableObject
 {

@@ -1,9 +1,9 @@
 ﻿using Finbuckle.MultiTenant.EntityFrameworkCore;
-using FSH.WebApi.Domain.Catalog;
+//using FSH.WebApi.Domain.Catalog;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Configuration;
+namespace FSH.WebApi.PostgreSQL.Configuration;
 
 public class BrandConfig : IEntityTypeConfiguration<Brand>
 {

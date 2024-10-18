@@ -2,11 +2,11 @@ using Finbuckle.MultiTenant;
 using FSH.WebApi.Application.Common.Events;
 using FSH.WebApi.Application.Common.Interfaces;
 using FSH.WebApi.Domain.Catalog;
-using FSH.WebApi.Infrastructure.Persistence.Configuration;
+using FSH.WebApi.PostgreSQL.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Context;
+namespace FSH.WebApi.PostgreSQL.Context;
 
 public class ApplicationDbContext : BaseDbContext
 {

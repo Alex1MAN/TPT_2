@@ -1,9 +1,9 @@
 ﻿using Finbuckle.MultiTenant.EntityFrameworkCore;
-using FSH.WebApi.Infrastructure.Auditing;
+//using FSH.WebApi.Infrastructure.Auditing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Configuration;
+namespace FSH.WebApi.PostgreSQL.Configuration;
 
 public class AuditTrailConfig : IEntityTypeConfiguration<Trail>
 {
