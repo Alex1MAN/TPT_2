@@ -5,9 +5,12 @@ using FSH.WebApi.Application.Common.Interfaces;
 using FSH.WebApi.Application.Identity.Roles;
 using FSH.WebApi.Domain.Identity;
 using FSH.WebApi.Infrastructure.Identity;
-using FSH.WebApi.Infrastructure.Persistence.Context;
+
+//using FSH.WebApi.Infrastructure.Persistence.Context;
+using FSH.WebApi.PostgreSQL.Context;
+
 using FSH.WebApi.Shared.Authorization;
-using FSH.WebApi.Shared.Multitenancy;
+//using FSH.WebApi.Shared.Multitenancy;
 using Mapster;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -22,7 +25,7 @@ internal class RoleService : IRoleService
     private readonly ApplicationDbContext _db;
     private readonly IStringLocalizer _t;
     private readonly ICurrentUser _currentUser;
-    private readonly ITenantInfo _currentTenant;
+    //private readonly ITenantInfo _currentTenant;
     private readonly IEventPublisher _events;
 
     public RoleService(
@@ -31,7 +34,7 @@ internal class RoleService : IRoleService
         ApplicationDbContext db,
         IStringLocalizer<RoleService> localizer,
         ICurrentUser currentUser,
-        ITenantInfo currentTenant,
+        //ITenantInfo currentTenant,
         IEventPublisher events)
     {
         _roleManager = roleManager;
@@ -39,7 +42,7 @@ internal class RoleService : IRoleService
         _db = db;
         _t = localizer;
         _currentUser = currentUser;
-        _currentTenant = currentTenant;
+        //_currentTenant = currentTenant;
         _events = events;
     }
 

@@ -54,7 +54,7 @@ internal static class Startup
         {
             DbProviderKeys.Npgsql => builder.UseNpgsql(connectionString, e =>
                                  e.MigrationsAssembly("Migrators.PostgreSQL")),
-            DbProviderKeys.SqlServer => builder.UseSqlServer(connectionString, e =>
+            /*DbProviderKeys.SqlServer => builder.UseSqlServer(connectionString, e =>
                                  e.MigrationsAssembly("Migrators.MSSQL")),
             DbProviderKeys.MySql => builder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString), e =>
                                  e.MigrationsAssembly("Migrators.MySQL")
@@ -62,7 +62,7 @@ internal static class Startup
             DbProviderKeys.Oracle => builder.UseOracle(connectionString, e =>
                                  e.MigrationsAssembly("Migrators.Oracle")),
             DbProviderKeys.SqLite => builder.UseSqlite(connectionString, e =>
-                                 e.MigrationsAssembly("Migrators.SqLite")),
+                                 e.MigrationsAssembly("Migrators.SqLite")),*/
             _ => throw new InvalidOperationException($"DB Provider {dbProvider} is not supported."),
         };
     }
