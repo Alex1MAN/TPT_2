@@ -1,4 +1,7 @@
-﻿using Finbuckle.MultiTenant.EntityFrameworkCore;
+﻿/*
+// No need right now
+
+using Finbuckle.MultiTenant.EntityFrameworkCore;
 //using FSH.WebApi.Infrastructure.Auditing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -12,3 +15,4 @@ public class AuditTrailConfig : IEntityTypeConfiguration<Trail>
             .ToTable("AuditTrails", SchemaNames.Auditing)
             .IsMultiTenant();
 }
+*/

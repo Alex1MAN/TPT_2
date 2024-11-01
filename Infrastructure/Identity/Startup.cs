@@ -1,6 +1,7 @@
-using FSH.WebApi.Infrastructure.Persistence.Context;
+//using FSH.WebApi.Infrastructure.Persistence.Context;
+using FSH.WebApi.PostgreSQL.Context;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
+//using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Infrastructure.Identity;
