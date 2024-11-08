@@ -17,16 +17,30 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{6DD9AADF-4940-4B9D-8E0F-26939AB32B94}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0ECDB8E9-8EB5-4EE0-8435-482E052FBA34} = {0ECDB8E9-8EB5-4EE0-8435-482E052FBA34}
+		{5FD26411-EAD2-4B0C-B9F0-BAD67EED2D7B} = {5FD26411-EAD2-4B0C-B9F0-BAD67EED2D7B}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{57F9F288-9D74-4C94-BE19-AC24AE42A9D9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Core\Application\Application.csproj", "{0ECDB8E9-8EB5-4EE0-8435-482E052FBA34}"
+	ProjectSection(ProjectDependencies) = postProject
+		{16ABE0FD-3B5B-490D-A1D6-3B0EFA4436BC} = {16ABE0FD-3B5B-490D-A1D6-3B0EFA4436BC}
+		{5FD26411-EAD2-4B0C-B9F0-BAD67EED2D7B} = {5FD26411-EAD2-4B0C-B9F0-BAD67EED2D7B}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Core\Domain\Domain.csproj", "{5FD26411-EAD2-4B0C-B9F0-BAD67EED2D7B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{16ABE0FD-3B5B-490D-A1D6-3B0EFA4436BC} = {16ABE0FD-3B5B-490D-A1D6-3B0EFA4436BC}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Core\Shared\Shared.csproj", "{16ABE0FD-3B5B-490D-A1D6-3B0EFA4436BC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostgreSQL", "PostgreSQL\PostgreSQL.csproj", "{BFBE439B-5D4F-4245-AEF6-B6EAED2C087C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6DD9AADF-4940-4B9D-8E0F-26939AB32B94} = {6DD9AADF-4940-4B9D-8E0F-26939AB32B94}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,5 +1,5 @@
 ﻿using FSH.WebApi.Application.Common.Persistence;
-using FSH.WebApi.Infrastructure.Common;
+//using FSH.WebApi.Infrastructure.Common;
 //using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -35,7 +35,7 @@ internal class ConnectionStringValidator : IConnectionStringValidator
                     var postgresqlcs = new NpgsqlConnectionStringBuilder(connectionString);
                     break;
 
-                case DbProviderKeys.MySql:
+                /*case DbProviderKeys.MySql:
                     var mysqlcs = new MySqlConnectionStringBuilder(connectionString);
                     break;
 
@@ -45,7 +45,7 @@ internal class ConnectionStringValidator : IConnectionStringValidator
 
                 case DbProviderKeys.SqLite:
                     var sqlite = new SqliteConnection(connectionString);
-                    break;
+                    break;*/
             }
 
             return true;
@@ -55,5 +55,14 @@ internal class ConnectionStringValidator : IConnectionStringValidator
             _logger.LogError($"Connection String Validation Exception : {ex.Message}");
             return false;
         }
+    }
+
+    internal class DbProviderKeys
+    {
+        public const string Npgsql = "postgresql";
+        public const string SqlServer = "mssql";
+        public const string MySql = "mysql";
+        public const string Oracle = "oracle";
+        public const string SqLite = "sqlite";
     }
 }

@@ -1,8 +1,8 @@
 using System.Data.SqlClient;
 using System.Runtime.InteropServices;
 using FSH.WebApi.Application.Common.Persistence;
-using FSH.WebApi.Infrastructure.Common;
-using Microsoft.Data.Sqlite;
+//using FSH.WebApi.Infrastructure.Common;
+//using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.Options;
 //using MySqlConnector;
 using Npgsql;
@@ -32,16 +32,16 @@ public class ConnectionStringSecurer : IConnectionStringSecurer
 
         return dbProvider?.ToLower() switch
         {
-            DbProviderKeys.Npgsql => MakeSecureNpgsqlConnectionString(connectionString),
+            DbProviderKeys.Npgsql => MakeSecureNpgsqlConnectionString(connectionString),/*
             DbProviderKeys.SqlServer => MakeSecureSqlConnectionString(connectionString),
             DbProviderKeys.MySql => MakeSecureMySqlConnectionString(connectionString),
             DbProviderKeys.SqLite => MakeSecureSqLiteConnectionString(connectionString),
-            DbProviderKeys.Oracle => MakeSecureOracleConnectionString(connectionString),
+            DbProviderKeys.Oracle => MakeSecureOracleConnectionString(connectionString),*/
             _ => connectionString
         };
     }
 
-    private static string MakeSecureOracleConnectionString(string connectionString)
+    /*private static string MakeSecureOracleConnectionString(string connectionString)
     {
         var builder = new OracleConnectionStringBuilder(connectionString);
 
@@ -97,7 +97,7 @@ public class ConnectionStringSecurer : IConnectionStringSecurer
         var builder = new SqliteConnection(connectionString);
 
         return builder.ToString();
-    }
+    }*/
 
     private static string MakeSecureNpgsqlConnectionString(string connectionString)
     {
@@ -114,5 +114,14 @@ public class ConnectionStringSecurer : IConnectionStringSecurer
         }
 
         return builder.ToString();
+    }
+
+    internal class DbProviderKeys
+    {
+        public const string Npgsql = "postgresql";
+        public const string SqlServer = "mssql";
+        public const string MySql = "mysql";
+        public const string Oracle = "oracle";
+        public const string SqLite = "sqlite";
     }
 }
