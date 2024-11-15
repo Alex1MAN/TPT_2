@@ -1,4 +1,6 @@
 using Finbuckle.MultiTenant;
+using Finbuckle.MultiTenant.Abstractions;
+
 using FSH.WebApi.PostgreSQL.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;

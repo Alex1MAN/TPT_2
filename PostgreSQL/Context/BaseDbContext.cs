@@ -1,10 +1,14 @@
 using System.Data;
 using Finbuckle.MultiTenant;
+using Finbuckle.MultiTenant.Abstractions;
+
+using Finbuckle.MultiTenant.EntityFrameworkCore;
 using FSH.WebApi.Application.Common.Events;
 using FSH.WebApi.Application.Common.Interfaces;
 using FSH.WebApi.Domain.Common.Contracts;
 //using FSH.WebApi.Infrastructure.Auditing;
 using FSH.WebApi.Infrastructure.Identity;
+using Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
@@ -31,7 +35,7 @@ public abstract class BaseDbContext : MultiTenantIdentityDbContext<ApplicationUs
     // Used by Dapper
     public IDbConnection Connection => Database.GetDbConnection();
 
-    public DbSet<Trail> AuditTrails => Set<Trail>();
+    //public DbSet<Trail> AuditTrails => Set<Trail>();  // old part of Auditing
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -56,25 +60,26 @@ public abstract class BaseDbContext : MultiTenantIdentityDbContext<ApplicationUs
         // Or uncomment the next line if you want to see them in the console
         // optionsBuilder.LogTo(Console.WriteLine, Microsoft.Extensions.Logging.LogLevel.Information);
 
-        if (!string.IsNullOrWhiteSpace(TenantInfo?.ConnectionString))
+        /*if (!string.IsNullOrWhiteSpace(TenantInfo?.ConnectionString))
         {
-            optionsBuilder.UseDatabase(_dbSettings.DBProvider, TenantInfo.ConnectionString);
-        }
+            optionsBuilder.UseDatabase(_dbSettings.DBProvider, TenantInfo.ConnectionString);    // new ITenantInfo don't nave ConnectionString as a parameter
+        }*/
     }
 
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
     {
-        var auditEntries = HandleAuditingBeforeSaveChanges(_currentUser.GetUserId());
+        //var auditEntries = HandleAuditingBeforeSaveChanges(_currentUser.GetUserId());
 
         int result = await base.SaveChangesAsync(cancellationToken);
 
-        await HandleAuditingAfterSaveChangesAsync(auditEntries, cancellationToken);
+        //await HandleAuditingAfterSaveChangesAsync(auditEntries, cancellationToken);
 
         await SendDomainEventsAsync();
 
         return result;
     }
 
+    /*
     private List<AuditTrail> HandleAuditingBeforeSaveChanges(Guid userId)
     {
         foreach (var entry in ChangeTracker.Entries<IAuditableEntity>().ToList())
@@ -198,6 +203,7 @@ public abstract class BaseDbContext : MultiTenantIdentityDbContext<ApplicationUs
 
         return SaveChangesAsync(cancellationToken);
     }
+    */
 
     private async Task SendDomainEventsAsync()
     {

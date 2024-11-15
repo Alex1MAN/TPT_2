@@ -2,7 +2,10 @@
 //using FSH.WebApi.Infrastructure.Multitenancy;
 using FSH.WebApi.PostgreSQL.Context;
 using FSH.WebApi.Shared.Authorization;
-using FSH.WebApi.Shared.Multitenancy;
+
+using Infrastructure.Identity;
+
+//using FSH.WebApi.Shared.Multitenancy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -11,15 +14,17 @@ namespace FSH.WebApi.PostgreSQL.Initialization;
 
 internal class ApplicationDbSeeder
 {
-    private readonly FSHTenantInfo _currentTenant;
+    //private readonly FSHTenantInfo _currentTenant;
     private readonly RoleManager<ApplicationRole> _roleManager;
     private readonly UserManager<ApplicationUser> _userManager;
     private readonly CustomSeederRunner _seederRunner;
     private readonly ILogger<ApplicationDbSeeder> _logger;
 
-    public ApplicationDbSeeder(FSHTenantInfo currentTenant, RoleManager<ApplicationRole> roleManager, UserManager<ApplicationUser> userManager, CustomSeederRunner seederRunner, ILogger<ApplicationDbSeeder> logger)
+
+    /*public ApplicationDbSeeder(FSHTenantInfo currentTenant, RoleManager<ApplicationRole> roleManager, UserManager<ApplicationUser> userManager, CustomSeederRunner seederRunner, ILogger<ApplicationDbSeeder> logger)*/
+    public ApplicationDbSeeder(RoleManager<ApplicationRole> roleManager, UserManager<ApplicationUser> userManager, CustomSeederRunner seederRunner, ILogger<ApplicationDbSeeder> logger)
     {
-        _currentTenant = currentTenant;
+        //_currentTenant = currentTenant;
         _roleManager = roleManager;
         _userManager = userManager;
         _seederRunner = seederRunner;
