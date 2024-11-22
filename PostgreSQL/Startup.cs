@@ -16,7 +16,7 @@ namespace FSH.WebApi.PostgreSQL;
 
 internal static class Startup
 {
-    private static readonly ILogger _logger = Log.ForContext(typeof(Startup));
+    private static readonly Serilog.ILogger _logger = Log.ForContext(typeof(Startup));
 
     internal static IServiceCollection AddPersistence(this IServiceCollection services)
     {
@@ -39,7 +39,7 @@ internal static class Startup
             .AddTransient<IDatabaseInitializer, DatabaseInitializer>()
             .AddTransient<ApplicationDbInitializer>()
             .AddTransient<ApplicationDbSeeder>()
-            .AddServices(typeof(ICustomSeeder), ServiceLifetime.Transient)
+            //.AddServices(typeof(ICustomSeeder), ServiceLifetime.Transient)
             .AddTransient<CustomSeederRunner>()
 
             .AddTransient<IConnectionStringSecurer, ConnectionStringSecurer>()
@@ -90,5 +90,14 @@ internal static class Startup
         }
 
         return services;
+    }
+
+    internal class DbProviderKeys
+    {
+        public const string Npgsql = "postgresql";
+        /*public const string SqlServer = "mssql";
+        public const string MySql = "mysql";
+        public const string Oracle = "oracle";
+        public const string SqLite = "sqlite";*/
     }
 }

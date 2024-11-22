@@ -93,4 +93,18 @@ public class EventAddingRepositoryDecorator<T> : IRepositoryWithEvents<T>
 
     public Task<TResult?> SingleOrDefaultAsync<TResult>(ISingleResultSpecification<T, TResult> specification, CancellationToken cancellationToken = default) =>
         _decorated.SingleOrDefaultAsync<TResult>(specification, cancellationToken);
+
+
+
+
+    // Updated 22.11.2024
+    public Task DeleteRangeAsync(ISpecification<T> specification, CancellationToken cancellationToken = default)
+    {
+        throw new NotImplementedException();
+    }
+
+    public IAsyncEnumerable<T> AsAsyncEnumerable(ISpecification<T> specification)
+    {
+        throw new NotImplementedException();
+    }
 }

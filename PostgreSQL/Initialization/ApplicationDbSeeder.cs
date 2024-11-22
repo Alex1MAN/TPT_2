@@ -46,8 +46,11 @@ internal class ApplicationDbSeeder
                 is not ApplicationRole role)
             {
                 // Create the role
-                _logger.LogInformation("Seeding {role} Role for '{tenantId}' Tenant.", roleName, _currentTenant.Id);
-                role = new ApplicationRole(roleName, $"{roleName} Role for {_currentTenant.Id} Tenant");
+                /*_logger.LogInformation("Seeding {role} Role for '{tenantId}' Tenant.", roleName, _currentTenant.Id);
+                role = new ApplicationRole(roleName, $"{roleName} Role for {_currentTenant.Id} Tenant");*/
+                _logger.LogInformation("Seeding {role}.", roleName);
+                role = new ApplicationRole(roleName, $"{roleName} Role");
+
                 await _roleManager.CreateAsync(role);
             }
 
@@ -60,10 +63,10 @@ internal class ApplicationDbSeeder
             {
                 await AssignPermissionsToRoleAsync(dbContext, FSHPermissions.Admin, role);
 
-                if (_currentTenant.Id == MultitenancyConstants.Root.Id)
+                /*if (_currentTenant.Id == MultitenancyConstants.Root.Id)
                 {
                     await AssignPermissionsToRoleAsync(dbContext, FSHPermissions.Root, role);
-                }
+                }*/
             }
         }
     }
@@ -75,7 +78,8 @@ internal class ApplicationDbSeeder
         {
             if (!currentClaims.Any(c => c.Type == FSHClaims.Permission && c.Value == permission.Name))
             {
-                _logger.LogInformation("Seeding {role} Permission '{permission}' for '{tenantId}' Tenant.", role.Name, permission.Name, _currentTenant.Id);
+                //_logger.LogInformation("Seeding {role} Permission '{permission}' for '{tenantId}' Tenant.", role.Name, permission.Name, _currentTenant.Id);
+                _logger.LogInformation("Seeding {role} Permission '{permission}'.", role.Name, permission.Name);
                 dbContext.RoleClaims.Add(new ApplicationRoleClaim
                 {
                     RoleId = role.Id,
@@ -90,7 +94,8 @@ internal class ApplicationDbSeeder
 
     private async Task SeedAdminUserAsync()
     {
-        if (string.IsNullOrWhiteSpace(_currentTenant.Id) || string.IsNullOrWhiteSpace(_currentTenant.AdminEmail))
+        // Update code below later
+        /*if (string.IsNullOrWhiteSpace(_currentTenant.Id) || string.IsNullOrWhiteSpace(_currentTenant.AdminEmail))
         {
             return;
         }
@@ -124,5 +129,7 @@ internal class ApplicationDbSeeder
             _logger.LogInformation("Assigning Admin Role to Admin User for '{tenantId}' Tenant.", _currentTenant.Id);
             await _userManager.AddToRoleAsync(adminUser, FSHRoles.Admin);
         }
+        */
+
     }
 }

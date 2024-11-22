@@ -30,4 +30,5 @@ public interface IReadRepository<T> : IReadRepositoryBase<T>
 public interface IRepositoryWithEvents<T> : IRepositoryBase<T>
     where T : class, IAggregateRoot
 {
+
 }
